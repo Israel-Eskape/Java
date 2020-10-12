@@ -257,12 +257,12 @@ public class FocalUbuntu{
         StdDraw.line(0.2289,0.4020,0.1303,0.3484);
         StdDraw.line(0.2384,0.3711,0.1605,0.3030);
         //Bigotes derecho
-        StdDraw.line(0.4578,0.4845,0.8632,0.5711);
+        StdDraw.line(0.4562,0.4886,0.8632,0.5711);
         StdDraw.line(0.4546,0.4639,0.7996,0.4247);
         StdDraw.line(0.4515,0.4412,0.6724,0.3360);
         StdDraw.line(0.4340,0.3958,0.5214,0.2824);
         StdDraw.line(0.4197,0.3773,0.4292,0.2701);
-        StdDraw.line(0.3926,37.52,0.3926,0.2247);
+        StdDraw.line(0.3926,0.3752,0.3926,0.2247);
         
     }
 
