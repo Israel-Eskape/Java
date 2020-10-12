@@ -96,7 +96,7 @@ public class FocalUbuntu{
 
         //Ear Rigth
         StdDraw.setPenColor(new Color(206,76,49));
-
+        //oreja Rellena
         pts.add(new Point2D.Double(83.6,94.4));
         pts.add(new Point2D.Double(76.4,96.7));
         pts.add(new Point2D.Double(69.15,90.51));
@@ -224,7 +224,51 @@ public class FocalUbuntu{
         pts.add(new Point2D.Double(67.56,43.50)); //inters B
         pts.add(new Point2D.Double(63.42,39.17));
         poligono(pts,0);
+        //Cuello inferior izq        
+        pts.add(new Point2D.Double(50.71,15.87));
+        pts.add(new Point2D.Double(51.35,1.85));
+        pts.add(new Point2D.Double(61.20,2.06));//intersec a
+        pts.add(new Point2D.Double(67.56,43.50));//intersec b
+        pts.add(new Point2D.Double(64.70,35.25));
+        poligono(pts,0);
+        //Cuello Centro
+        pts.add(new Point2D.Double(61.20,2.06));
+        pts.add(new Point2D.Double(65.65,1.64));
+        pts.add(new Point2D.Double(78.53,12.57));//inter a
+        pts.add(new Point2D.Double(67.56,43.50));//intersec b
+        poligono(pts,0);
+        //Cuello derecho
+        pts.add(new Point2D.Double(78.53,12.57));
+        pts.add(new Point2D.Double(88.71,28.45));//intersec a
+        pts.add(new Point2D.Double(82.03,50.72));//inters b
+        pts.add(new Point2D.Double(74.56,58.76));
+        pts.add(new Point2D.Double(72.97,54.63));
+        pts.add(new Point2D.Double(67.56,43.50));//intersec c
+        poligono(pts,0);
+        //cuello derecho inferior
+        pts.add(new Point2D.Double(88.71,28.45));//intersec a
+        pts.add(new Point2D.Double(92.36,39.58));
+        pts.add(new Point2D.Double(82.03,50.72));//inters b
+        poligono(pts,0);
+
+        //Bigotes izquierdo
+        StdDraw.line(0.2464,0.4701,0.006359,0.5855);
+        StdDraw.line(0.2416,0.4494,0.004769,0.4804);
+        StdDraw.line(0.2289,0.4020,0.1303,0.3484);
+        StdDraw.line(0.2384,0.3711,0.1605,0.3030);
+        //Bigotes derecho
+        StdDraw.line(0.4578,0.4845,0.8632,0.5711);
+        StdDraw.line(0.4546,0.4639,0.7996,0.4247);
+        StdDraw.line(0.4515,0.4412,0.6724,0.3360);
+        StdDraw.line(0.4340,0.3958,0.5214,0.2824);
+        StdDraw.line(0.4197,0.3773,0.4292,0.2701);
+        StdDraw.line(0.3926,37.52,0.3926,0.2247);
+        
     }
+
+
+
+
     public static void poligono(ArrayList<Point2D> p,int t){
         double [] x = new double [p.size()];
         double [] y = new double [p.size()];
@@ -238,7 +282,6 @@ public class FocalUbuntu{
             StdDraw.filledPolygon(x,y);
         p.clear();
     }
-
     public static void main(String [] args){
         init();
     }
