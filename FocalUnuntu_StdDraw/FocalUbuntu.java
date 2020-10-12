@@ -6,8 +6,10 @@ import java.util.ArrayList;
 
 public class FocalUbuntu{
     public static void init(){
+        
         StdDraw.setPenColor(new Color(68,19,50));
         StdDraw.filledSquare(1, 1, 1.0);
+        
         draw();
 
     }
@@ -93,6 +95,13 @@ public class FocalUbuntu{
         pts.add(new Point2D.Double(52.14,60.61));
         pts.add(new Point2D.Double(58.18,67.83));
         poligono(pts, 1);
+        
+        //Pupila izq
+        StdDraw.setPenColor(new Color(141,53,78));
+        StdDraw.filledEllipse(0.2988,0.6536,0.007,0.02);
+        //Pupila derecha
+        StdDraw.filledEllipse(0.5039,0.6412,0.007,0.02);
+
 
         //Ear Rigth
         StdDraw.setPenColor(new Color(206,76,49));
@@ -173,7 +182,6 @@ public class FocalUbuntu{
         pts.add(new Point2D.Double(31.79,45.97));
         poligono(pts,1);
         
-        //StdDraw.line(31.79,45.97,34.18,40.41);
         //trompa lado derecho
         pts.add(new Point2D.Double(46.10,53.40));
         pts.add(new Point2D.Double(42.28,45.56));
@@ -275,6 +283,7 @@ public class FocalUbuntu{
         for(int i =0;i<p.size();i++){
             x[i]= p.get(i).getX()/100;
             y[i]= p.get(i).getY()/100;
+            StdDraw.pause(10);
         }
         if(t == 0)
             StdDraw.polygon(x,y);
