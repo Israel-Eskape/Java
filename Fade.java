@@ -49,39 +49,5 @@ public class Fade {
             // picture.show();
             }
         }
-        /*
-        int size = args.length;
-        System.out.println("tamaño : "+size);
-        ArrayList<String> picture= new ArrayList<String>();
-        for(int i = 0; i < size; i++){
-            picture.add(args[i]);
-        }
-
-        //imprimir los elementos del array
-        Iterator<String> nombreIterator = picture.iterator();
-        while(nombreIterator.hasNext()){
-	        String elemento = nombreIterator.next();
-	        System.out.print(elemento+" / ");
-        }
-*/
-        /*int n = Integer.parseInt(args[0]);         // # of frames
-        
-        Picture picture1 = new Picture(args[1]);   // begin picture
-        Picture picture2 = new Picture(args[2]);   // end picture
-        int width  = picture1.width();
-        int height = picture1.height();
-        Picture picture = new Picture(width, height);
-        for (int k = 0; k <= n; k++) {
-            double alpha = 1.0 * k / n;
-            for (int col = 0; col < width; col++) {
-                for (int row = 0; row < height; row++) {
-                    Color c1 = picture1.get(col, row);
-                    Color c2 = picture2.get(col, row);
-                    picture.set(col, row, combine(c2, c1, alpha));
-                    picture.show();
-                }
-            }
-            // picture.show();
-        }*/
     }
 }
