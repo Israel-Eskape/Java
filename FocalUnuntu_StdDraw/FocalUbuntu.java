@@ -59,6 +59,7 @@ public class FocalUbuntu{
         pts.add(new Point2D.Double(60.09,86.80));
         pts.add(new Point2D.Double(49.92,88.65));
         poligono(pts, 0);
+
         //Arriba del ojo
         pts.add(new Point2D.Double(60.09,86.80));
         pts.add(new Point2D.Double(47.69,76.9));
@@ -131,8 +132,98 @@ public class FocalUbuntu{
         poligono(pts, 0);
         
         
+        //Nariz
+        pts.add(new Point2D.Double(27.02,56.08));
+        pts.add(new Point2D.Double(26.23,55.46));
+        pts.add(new Point2D.Double(29.25,51.75));
+        pts.add(new Point2D.Double(36.72,56.28));
+        pts.add(new Point2D.Double(34.65,58.5));
+        pts.add(new Point2D.Double(29.72,57.93));
+        poligono(pts,0);
 
+        pts.add(new Point2D.Double(26.23,55.46));
+        pts.add(new Point2D.Double(23.84,51.75));
+        pts.add(new Point2D.Double(23.84,48.86));
+        pts.add(new Point2D.Double(24.16,44.12));
+        pts.add(new Point2D.Double(26.23,40.61));
+        pts.add(new Point2D.Double(29.88,39.38));
+        pts.add(new Point2D.Double(29.25,51.75));
+        poligono(pts, 0);
 
+        pts.add(new Point2D.Double(29.25,51.75));
+        pts.add(new Point2D.Double(29.88,39.38));
+        pts.add(new Point2D.Double(34.18,40.41));
+        pts.add(new Point2D.Double(39.26,45.36));
+        pts.add(new Point2D.Double(42.28,45.56));
+        pts.add(new Point2D.Double(46.10,53.40));
+        pts.add(new Point2D.Double(38.95,51.54));
+        pts.add(new Point2D.Double(38.79,54.43));
+        pts.add(new Point2D.Double(36.88,56.08));
+        poligono(pts,0);
+        
+        //orificio nariz
+        pts.add(new Point2D.Double(25.59,49.89));
+        pts.add(new Point2D.Double(27.82,48.04));
+        pts.add(new Point2D.Double(27.50,45.77));
+        pts.add(new Point2D.Double(25.43,47.62));
+        poligono(pts, 1);
+        pts.add(new Point2D.Double(31.00,47.62));
+        pts.add(new Point2D.Double(33.38,49.27));
+        pts.add(new Point2D.Double(34.18,47.42));
+        pts.add(new Point2D.Double(31.79,45.97));
+        poligono(pts,1);
+        
+        //StdDraw.line(31.79,45.97,34.18,40.41);
+        //trompa lado derecho
+        pts.add(new Point2D.Double(46.10,53.40));
+        pts.add(new Point2D.Double(42.28,45.56));
+        pts.add(new Point2D.Double(46.42,39.17));//a
+        pts.add(new Point2D.Double(49.12,49.69));//b
+        poligono(pts,0);
+        pts.add(new Point2D.Double(42.28,45.56));
+        pts.add(new Point2D.Double(39.26,45.36));
+        pts.add(new Point2D.Double(34.18,40.41));
+        pts.add(new Point2D.Double(29.88,39.38));
+        pts.add(new Point2D.Double(33.86,33.40));
+        pts.add(new Point2D.Double(42.55,34.63));
+        pts.add(new Point2D.Double(46.42,39.17));
+        poligono(pts,0);
+        //centro de la trompa
+        pts.add(new Point2D.Double(29.88,39.38));
+        pts.add(new Point2D.Double(33.38,34.22));
+        pts.add(new Point2D.Double(28.45,35.05));
+        poligono(pts,1);
+        //izquierdo de la trompa
+        pts.add(new Point2D.Double(29.88,39.38));
+        pts.add(new Point2D.Double(28.13,33.81));
+        pts.add(new Point2D.Double(24.64,34.22));
+        pts.add(new Point2D.Double(22.89,40.41));
+        pts.add(new Point2D.Double(24.16,44.12));
+        pts.add(new Point2D.Double(26.23,40.61));
+        poligono(pts,0);
+        //Abajo de la trompa
+        pts.add(new Point2D.Double(26.23,34.02));
+        pts.add(new Point2D.Double(29.88,28.04));
+        pts.add(new Point2D.Double(37.36,26.59));
+        pts.add(new Point2D.Double(42.44,30.51));//inters a
+        pts.add(new Point2D.Double(63.42,39.17));
+        pts.add(new Point2D.Double(67.56,43.50)); //inters B
+        pts.add(new Point2D.Double(49.12,49.69));
+        pts.add(new Point2D.Double(46.42,39.17));
+        pts.add(new Point2D.Double(42.55,34.63));
+        pts.add(new Point2D.Double(33.86,33.40));
+        pts.add(new Point2D.Double(33.38,34.22));
+        pts.add(new Point2D.Double(28.45,35.05));
+        pts.add(new Point2D.Double(28.13,33.81));   
+        poligono(pts,0);
+        //Cuello parte superior
+        pts.add(new Point2D.Double(42.44,30.51));
+        pts.add(new Point2D.Double(48.17,28.65));
+        pts.add(new Point2D.Double(50.71,15.87));//inters a
+        pts.add(new Point2D.Double(64.70,35.25));
+        pts.add(new Point2D.Double(67.56,43.50)); //inters B
+        pts.add(new Point2D.Double(63.42,39.17));
+        poligono(pts,0);
     }
     public static void poligono(ArrayList<Point2D> p,int t){
         double [] x = new double [p.size()];
