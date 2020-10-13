@@ -225,9 +225,9 @@ public final class Picture implements ActionListener {
         // create the GUI for viewing the image if needed
         if (frame == null) {
             frame = new JFrame();
-
+            frame.setLocation(400,80);
             JMenuBar menuBar = new JMenuBar();
-            JMenu menu = new JMenu("File");
+            JMenu menu = new JMenu("Israel Eskape");
             menuBar.add(menu);
             JMenuItem menuItem1 = new JMenuItem(" Save...   ");
             menuItem1.addActionListener(this);
