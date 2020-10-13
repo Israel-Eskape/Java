@@ -2,19 +2,36 @@ import java.awt.*;
 import java.awt.geom.*;
 import java.util.ArrayList;
 
-
-
 public class FocalUbuntu{
-    public static void init(){
+    static Color backgroundoColor;
+    static Color ojos ;
+    static Color ojosColor;
+    static Color figuraColor;
+    static Color pupilaColor ;
+    static int r,g,b;
+    public static void init() {
+        for(int i =0;true;i++){
+            getRGB();backgroundoColor = new Color(r,g,b);
+            getRGB();ojos = new Color(r,g,b);
+            getRGB();ojosColor = new Color(r,g,b);
+            getRGB();figuraColor = new Color(r,g,b);
+            getRGB();pupilaColor = new Color(r,g,b);
         
-        StdDraw.setPenColor(new Color(68,19,50));
-        StdDraw.filledSquare(1, 1, 1.0);
+            StdDraw.setPenColor(backgroundoColor);
+            StdDraw.filledSquare(1, 1, 1.0);
         
-        draw();
+            draw();
+            StdDraw.pause(1000);
+        }
+    }
 
+    public static void getRGB(){
+            r =(int) (Math.random()*255);
+            g = (int)(Math.random()*220);
+            b = (int)(Math.random()*220);
     }
     public static void draw(){
-        StdDraw.setPenColor(new Color(206,76,49));
+        StdDraw.setPenColor(figuraColor);
         StdDraw.setPenRadius(0.005);
 
         ArrayList<Point2D> pts = new ArrayList<>();
@@ -41,7 +58,7 @@ public class FocalUbuntu{
         pts.add(new Point2D.Double(33.06,77.1));
         poligono(pts,0);
         //lado izquierdo del ojo
-        StdDraw.setPenColor(new Color(206,76,49));
+        StdDraw.setPenColor(figuraColor);
         pts.add(new Point2D.Double(28.13,71.95));
         pts.add(new Point2D.Double(25.43,61.85));
         pts.add(new Point2D.Double(26.23,55.46));
@@ -81,7 +98,7 @@ public class FocalUbuntu{
         pts.add(new Point2D.Double(50.23,68.65));
         poligono(pts, 0);
         //Ojo Izquierdo
-        StdDraw.setPenColor(StdDraw.WHITE);
+        StdDraw.setPenColor(ojosColor);
         pts.add(new Point2D.Double(29.25,70.30));
         pts.add(new Point2D.Double(27.98,64.94));
         pts.add(new Point2D.Double(28.77,61.44));
@@ -97,14 +114,14 @@ public class FocalUbuntu{
         poligono(pts, 1);
         
         //Pupila izq
-        StdDraw.setPenColor(new Color(141,53,78));
+        StdDraw.setPenColor(pupilaColor);
         StdDraw.filledEllipse(0.2988,0.6536,0.007,0.02);
         //Pupila derecha
         StdDraw.filledEllipse(0.5039,0.6412,0.007,0.02);
 
 
         //Ear Rigth
-        StdDraw.setPenColor(new Color(206,76,49));
+        StdDraw.setPenColor(figuraColor);
         //oreja Rellena
         pts.add(new Point2D.Double(83.6,94.4));
         pts.add(new Point2D.Double(76.4,96.7));
@@ -271,11 +288,23 @@ public class FocalUbuntu{
         StdDraw.line(0.4340,0.3958,0.5214,0.2824);
         StdDraw.line(0.4197,0.3773,0.4292,0.2701);
         StdDraw.line(0.3926,0.3752,0.3926,0.2247);
-        
+        //Mirada
+        StdDraw.setPenColor(ojosColor);
+        //Izquierda
+        for(int i =0;i<19;i++){
+            StdDraw.filledCircle(0.2464-(i*0.011),0.6494-(i*0.003),0.003);
+            StdDraw.pause(13);
+        }
+        //Mirada derecha
+        for(int i =0;i<30;i++){
+            StdDraw.filledCircle(0.4562-(i*0.011),0.6371-(i*0.003),0.003);
+            StdDraw.pause(13);
+        }
+        StdDraw.setPenColor(figuraColor);
+        Font font = new Font ("Bodoni MT Black", Font.BOLD, 27);
+            StdDraw.setFont (font);
+            StdDraw.text (0.2368, 0.1587, "Focal Ubuntu");
     }
-
-
-
 
     public static void poligono(ArrayList<Point2D> p,int t){
         double [] x = new double [p.size()];
