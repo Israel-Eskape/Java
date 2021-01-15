@@ -18,8 +18,6 @@ public class Ndc extends JFrame {
      *
      */
     private static final long serialVersionUID = 1L;
-
-    ArrayList<Point2D> puntos = new ArrayList<>();
  
     JLabel jlabelR = new JLabel();
     
@@ -115,10 +113,10 @@ public class Ndc extends JFrame {
     }
 
     public void readFile(String nameFile, JPanel panel) {
-        ArrayList<Double> auxelement = new ArrayList<Double>();
-        Double xx;
+        Double xx =0.0, yy=0.0;
         double r;
-       
+        Punto p;
+        ArrayList<Punto> listPoint = new ArrayList();
         try {
             /**
              * Se pasa como referencia un panel donde va a dbujar los puntos que obtenga del archivo que tambien 
@@ -148,15 +146,17 @@ public class Ndc extends JFrame {
                  */
                 if (d.equals("end")) {
 
-                    getPuntos(panel, auxelement);
-                    auxelement.clear(); //Limpia el arreglo porque indica que ya graficó los puntos porque encontro un token de fin de linea
-
+                    //getPuntos(panel, auxelement);
+                    drawImg(panel, listPoint);
+                    //list.clear(); //Limpia el arreglo porque indica que ya graficó los puntos porque encontro un token de fin de linea
+                    listPoint.clear();
                 } else {
                     StringTokenizer dato = new StringTokenizer(d, ",");
-                    while (dato.hasMoreTokens()) {
-                        xx = Double.parseDouble(dato.nextToken());
-                        auxelement.add(xx);
-                    }
+                    xx = Double.parseDouble(dato.nextToken().trim());
+                    yy = Double.parseDouble(dato.nextToken().trim());
+                    p = new Punto(xx,yy);
+                    listPoint.add(p);
+
                 }
 
             }
@@ -168,31 +168,10 @@ public class Ndc extends JFrame {
         } catch (Exception exc) {
             JOptionPane.showInternalMessageDialog(null, nameFile + " -->" + exc.getMessage());
         }
-        // return getPuntos(auxelement);
+
     }
 
-    public void getPuntos(JPanel panel, ArrayList<Double> coordenadas) {
-        ArrayList<Point2D> pts = new ArrayList<>();
-        Double xx = 0.0, yy = 0.0;
-        
-        try {
-            for (int i = 0; i < coordenadas.size() - 1; i += 2) {
-                xx = coordenadas.get(i);
-                yy = coordenadas.get(i + 1);
-
-                pts.add(new Point2D.Double(xx, yy));
-                //System.out.println("Punto i" + (j) + "( " + xx + " , " + yy + " )");
-                
-            }
-
-        } catch (Exception e) {
-            JOptionPane.showInternalMessageDialog(null, "Warning in ---> Ndc/getPuntos  <---" + e.getMessage());
-        }
-        drawImg(panel, pts);
-        // return pts;
-    }
-
-    public void drawImg(JPanel panel, ArrayList<Point2D> puntos) {
+    public void drawImg(JPanel panel, ArrayList<Punto> puntos) {
         int dx0 = 0, dy0 = 0;
         int dx1 = 0, dy1 = 0;
         int xmax=0,ymax=0;
