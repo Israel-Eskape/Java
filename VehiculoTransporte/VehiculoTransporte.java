@@ -1,8 +1,8 @@
 public abstract class VehiculoTransporte{
     protected int capacidad;
     protected int peso;
-    private Frenar frenar;
-    private Acelerar acelerar;
+    protected Frenar frenar;
+    protected Acelerar acelerar;
 
     VehiculoTransporte(){}
     
@@ -12,7 +12,5 @@ public abstract class VehiculoTransporte{
     public Acelerar movoAcelerar(){
         return acelerar;
     }
-    
-
     
 }

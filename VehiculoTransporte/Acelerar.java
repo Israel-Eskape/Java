@@ -1,3 +1,3 @@
 public interface Acelerar {
-    float acelerar(float intensidad);
+    float acelerar(int velocidad,float intensidad);
 }
