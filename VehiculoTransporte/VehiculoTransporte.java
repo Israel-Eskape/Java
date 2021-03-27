@@ -3,14 +3,29 @@ public abstract class VehiculoTransporte{
     protected int peso;
     protected Frenar frenar;
     protected Acelerar acelerar;
+    protected float intensidad;
+    protected int velocidad;
 
     VehiculoTransporte(){}
     
-    public Frenar movoFrenar(){
-        return frenar;
+    public void setIntensidad(float intensidad){
+        this.intensidad = intensidad;
     }
-    public Acelerar movoAcelerar(){
-        return acelerar;
+    public float getIntensidad(){
+        return intensidad;
     }
-    
-}
+    public void setVelocidad(int velocidad){
+        this.velocidad = velocidad;
+    }
+    public float getVelocidad(){
+        return velocidad;
+    }
+
+    public double modoFrenar(){
+        return frenar.frenar(intensidad);
+    }
+    public float modoAcelerar(){
+        return acelerar.acelerar(velocidad, intensidad);
+    }
+
+}   

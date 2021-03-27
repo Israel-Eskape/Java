@@ -1,3 +1,3 @@
 public interface Frenar {
-    float frenar(float intensidad);
+    public float frenar(float intensidad);
 }

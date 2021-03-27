@@ -4,10 +4,9 @@ public class AutomovilEstandar extends VehiculoTransporte{
         acelerar = new AcelerarManual();
     }
     public float acelerar(int velocidad, float intensidad){
-        
         return intensidad;
     }
     public float frenar(float intensidad){
-        return 0;
+        return intensidad;
     }
 }
