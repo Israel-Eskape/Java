@@ -21,7 +21,7 @@ public abstract class VehiculoTransporte{
         return velocidad;
     }
 
-    public double modoFrenar(){
+    public float modoFrenar(){
         return frenar.frenar(intensidad);
     }
     public float modoAcelerar(){
