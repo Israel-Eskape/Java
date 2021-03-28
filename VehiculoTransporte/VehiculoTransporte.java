@@ -1,10 +1,13 @@
+/**
+ * Es la clase Padre donde es la que va a heredar sus propiedades a sus clases hijas
+ */
 public abstract class VehiculoTransporte{
-    protected int capacidad;
-    protected int peso;
+    private int capacidad;
+    private int peso;
     protected Frenar frenar;
     protected Acelerar acelerar;
-    protected float intensidad;
-    protected int velocidad;
+    private float intensidad;
+    private int velocidad;
 
     VehiculoTransporte(){}
     

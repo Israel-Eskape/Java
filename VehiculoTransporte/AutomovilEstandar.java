@@ -1,5 +1,9 @@
+
 public class AutomovilEstandar extends VehiculoTransporte{
-    AutomovilEstandar(){
+/**
+ * Clase donde se herenda las propiedades de la clase Abstracta VehiculoTransporte
+ * es donde va a variar de acuerdo a cada tipo de transporte en este caso es un Automovil Estandar
+ */    AutomovilEstandar(){
         frenar = new FrenarManual();
         acelerar = new AcelerarManual();
         System.out.println("Se crea un Automovil Estandar");
@@ -14,6 +18,5 @@ public class AutomovilEstandar extends VehiculoTransporte{
         setVelocidad(velocidad);
         setIntensidad(intensidad);
         return intensidad;
-    }
-    
+    }     
 }

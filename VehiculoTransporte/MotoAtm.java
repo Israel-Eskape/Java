@@ -1,3 +1,7 @@
+/**
+ * Clase donde se herenda las propiedades de la clase Abstracta VehiculoTransporte
+ * es donde va a variar de acuerdo a cada tipo de transporte en este caso es un Moto Automatico
+ */
 public class MotoAtm extends VehiculoTransporte {
     MotoAtm(){
         frenar = new FrenarAtm();
