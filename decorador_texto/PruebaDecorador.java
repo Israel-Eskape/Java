@@ -1,18 +1,18 @@
 public class PruebaDecorador{
     public static void main(String args[]){
         Texto textob = new TextoC();
-        textob.setTexto("Como entre los individuos como entre las naciones");
+        textob.setTexto("                       Como entre los individuos como entre las naciones");
 /*        System.out.println("Texto -> "+textob.getTexto());
         Alinear ta = new Alinear(textob);
         ta.setAlinear('c');
         System.out.println(ta.getTexto());*/
 
-/*        Texto ta = new Alinea(textob,'c');
+        Texto ta = new Alinea(textob,'c');
         System.out.println(ta.getTexto());
-        Texto tb = new Alinea(textob,'r');
+        Texto tb = new Alinea(textob,'I');
         System.out.println(tb.getTexto());
-  */      
-        Texto tc = new Vertical(textob,'v');
-        System.out.println(tc.getTexto());
+        
+//        Texto tc = new Vertical(textob,'v');
+//        System.out.println(tc.getTexto());
     }
 }

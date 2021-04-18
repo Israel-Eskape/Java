@@ -1,3 +1,4 @@
+
 public class Alinea extends Decorador {
     private char alinear;
 
@@ -17,12 +18,16 @@ public class Alinea extends Decorador {
                 t+=" ";
         }
 
-        if(alinear == 'R' || alinear == 'r'){
+        if(alinear == 'D' || alinear == 'd'){
             numeroEspacios = (tamañoRenglon - texto.length());
             for(int p=0; p < numeroEspacios;p++)
                 t+=" ";
         }
 
+        if(alinear == 'I' || alinear == 'i'){
+            texto = texto.replaceAll("^\\s*", "");
+        }
+        
         return t+texto;
     }
     @Override
