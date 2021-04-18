@@ -9,6 +9,7 @@ public class PruebaDecorador{
 
         Texto ta = new Alinea(textob,'c');
         System.out.println(ta.getTexto());
- 
+        Texto tb = new Alinea(textob,'r');
+        System.out.println(tb.getTexto());
     }
 }
