@@ -10,18 +10,19 @@ public class Alinea extends Decorador {
     public String getTexto(){
         int tamañoRenglon = 80;
         int numeroEspacios= 0;
-        String t = " ";
+        String t = "";
         if(alinear == 'C' || alinear == 'c'){
             numeroEspacios = (tamañoRenglon - texto.length())/2;
             for(int p=0; p < numeroEspacios;p++)
                 t+=" ";
         }
+
         if(alinear == 'R' || alinear == 'r'){
             numeroEspacios = (tamañoRenglon - texto.length());
             for(int p=0; p < numeroEspacios;p++)
                 t+=" ";
         }
-        
+
         return t+texto;
     }
     @Override
