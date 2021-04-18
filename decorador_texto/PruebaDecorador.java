@@ -1,7 +1,7 @@
 public class PruebaDecorador{
     public static void main(String args[]){
         Texto textob = new TextoC();
-        textob.setTexto("                       Como entre los individuos como entre las naciones");
+        textob.setTexto("Como entre los individuos como entre las naciones");
 /*        System.out.println("Texto -> "+textob.getTexto());
         Alinear ta = new Alinear(textob);
         ta.setAlinear('c');
