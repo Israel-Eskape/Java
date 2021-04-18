@@ -12,7 +12,7 @@ public class PruebaDecorador{
         Texto tb = new Alinea(textob,'I');
         System.out.println(tb.getTexto());
         
-//        Texto tc = new Vertical(textob,'v');
-//        System.out.println(tc.getTexto());
+        Texto tc = new Justificar(textob,'j');
+        System.out.println(tc.getTexto());
     }
 }
