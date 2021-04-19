@@ -7,6 +7,11 @@ public class Alinea extends Decorador {
         alinear = ta;
         texto= super.getTexto();
     }
+
+    public void setAlinea(char ta){
+        alinear = ta;
+    }
+    
     @Override
     public String getTexto(){
         int tamañoRenglon = 80;
@@ -30,6 +35,7 @@ public class Alinea extends Decorador {
         
         return t+texto;
     }
+
     @Override
     public void setTexto(String t){
         //throw new UnsupportedOperationException("no sopported yet");
